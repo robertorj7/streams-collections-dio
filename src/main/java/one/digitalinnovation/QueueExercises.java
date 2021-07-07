@@ -1,9 +1,6 @@
 package one.digitalinnovation;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class QueueExercises {
@@ -36,5 +33,13 @@ public class QueueExercises {
         namesQueue.add("Daniel");
         System.out.println(namesQueue);
 
+        System.out.println("\n6- Retorne o tamanho da lista");
+        System.out.println(namesQueue.size());
+
+        System.out.println("\n7- Verifique se a lista está vazia");
+        System.out.println("Lista vazia? " + namesQueue.isEmpty());
+
+        System.out.println("\n8- Verifique se o nome Carlos está na lista");
+        System.out.println(namesQueue.contains("Carlos"));
     }
 }
