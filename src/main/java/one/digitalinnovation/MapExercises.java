@@ -29,6 +29,7 @@ public class MapExercises {
             statesMap.put("PI", "Piaui");
             statesMap.put("RJ", "Rio de Janeiro");
             statesMap.put("RN", "Rio Grande do Norte");
+            statesMap.put("RS", "Rio Grande do Sul");
             statesMap.put("RO", "Rondonia");
             statesMap.put("RR", "Roraima");
             statesMap.put("SC", "Santa Catarina");
@@ -44,15 +45,24 @@ public class MapExercises {
         System.out.println("\n3- Adicione o Distrito Federal");
             statesMap.put("DF", "Distrito Federal");
             System.out.println(statesMap);
+
         System.out.println("\n4- Verifique o tamanho do mapa");
+            System.out.println(statesMap.size());
 
         System.out.println("\n5- Remova o estado do Mato Grosso do Sul usando o nome");
+            statesMap.remove("MS", "Mato Grosso do Sul");
+            System.out.println(statesMap);
 
         System.out.println("\n6- Navegue em todos os registros do map, mostrando no console o seguinte formato: NOME (SIGLA)");
+            for (Map.Entry<String, String> entry : statesMap.entrySet()) {
+                System.out.println(entry.getValue() + " (" + entry.getKey() + ")");
+            }
 
         System.out.println("\n7- Verifique se o estado de Santa Catarina existe no map buscando por sua sigla (SC)");
+            System.out.println("SC existe? " + statesMap.containsKey("SC"));
 
         System.out.println("\n8- Verifique se o estado do Maranhão existe no map buscando por seu nome");
+            System.out.println("Maranhao existe? " + statesMap.containsValue("Maranhao"));
 
 
 
