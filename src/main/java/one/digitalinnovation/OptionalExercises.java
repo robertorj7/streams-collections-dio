@@ -30,6 +30,5 @@ public class OptionalExercises {
             String value = presentOptional.get();
             System.out.println(value);
         }
-
     }
 }
