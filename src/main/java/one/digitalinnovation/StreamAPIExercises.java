@@ -1,6 +1,7 @@
 package one.digitalinnovation;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,11 +34,18 @@ public class StreamAPIExercises {
             clients.stream().forEach(client ->
                     System.out.println(client));
 
-        System.out.println("\n5- Retorne clientes com nome que possuem a letra B");
+        System.out.println("\n5- Retorne clientes com nome que possuem a letra C");
+            System.out.println("Clientes com C: " + clients.stream().filter(client ->
+                    client.getName().toLowerCase().contains("c")).collect(Collectors.toList()));
 
-        System.out.println("6- Retorne se existe ao menos um cliente com a letra D");
+        System.out.println("\n6- Retorne se existe ao menos um cliente com a letra D");
+            System.out.println("Existe cliente com letra D? " + clients.stream().anyMatch(client ->
+                    client.getName().toLowerCase().contains("d")));
 
-        System.out.println("7- Retorne o cliente mais velho e o mais novo da coleção");
-
+        System.out.println("\n7- Retorne o cliente mais velho e o mais novo da coleção");
+            System.out.println("Cliente mais velho: " + clients.stream()
+                    .max(Comparator.comparing(client -> client.getAge())));
+            System.out.println("Cliente mais novo: " + clients.stream()
+                    .min(Comparator.comparing(client -> client.getAge())));
     }
 }
